@@ -69,6 +69,16 @@ header section.fixed nav ul li {
   text-align: center;
   margin: 0px 10px;
 }
+header section.fixed nav ul li a {
+  text-decoration: none;
+  color: #333333;
+}
+header section.fixed nav ul li a:hover {
+  color: #0062ff;
+}
+header section.fixed nav ul li a::before {
+  content: "> ";
+}
 
 .content {
   width: 100%;
