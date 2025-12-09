@@ -1,0 +1,24 @@
+/* scss 編譯過的 註解 */
+$fontSize : 16px; // 數值
+$lineHeight : 1.5; // 數值
+$colorPrimary : #0062ff; // 主要顏色
+$fontBaseColor : #333333; // 文字顏色
+$bgColor : #f8ca66; // 背景顏色
+$fontFamilyBase : 'Helvetica Neue', Helvetica, Arial, sans-serif; // 主要字型 字串
+
+$spacingUnit : 8px 10px; // 間距單位 list
+
+
+
+body {
+   font-size: $fontSize;
+   line-height: $lineHeight;
+   color :$fontBaseColor;
+   background-color: $bgColor;
+}
+
+h1 {
+   font-size: 2.5em;
+   color: $fontBaseColor;
+   margin-bottom: $spacingUnit;
+}
