@@ -22,6 +22,7 @@
 body {
   font-size: 16px;
   line-height: 1.5;
+  box-sizing: border-box;
   color: #333333;
   background-color: #f8ca66;
 }
@@ -34,6 +35,35 @@ h1 {
   font-size: 2.5em;
   color: #333333;
   margin-bottom: 8px 10px;
+}
+
+.container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #3eff62;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+header nav ul li {
+  width: 120px;
+  height: 40px;
+  margin: 0px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

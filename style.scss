@@ -44,7 +44,7 @@ $attr : border;
     box-sizing: content-box;
     border: 1px solid $colorPrimary;
     background-image: url('#{$name}.jpg');
-    #{$attr} : 5px; 
+    #{$attr}: 5px;
 }
 
 
@@ -55,6 +55,7 @@ $attr : border;
 body {
     font-size: $fontSize;
     line-height: $lineHeight;
+    box-sizing: border-box;
     color: $fontBaseColor;
 
     @if $darken {
@@ -80,11 +81,41 @@ body {
     }
 }
 
-
-
-
 h1 {
     font-size: 2.5em;
     color: $fontBaseColor;
     margin-bottom: $spacingUnit;
+}
+
+.container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        background-color: #3eff62;
+    }
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            li {
+                width: 120px;
+                height: 40px;
+                margin: 0px 10px;
+            }
+        }
+    }
+
 }
