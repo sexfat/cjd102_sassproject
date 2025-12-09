@@ -13,8 +13,8 @@ $spacingUnit : 8px 10px; // 間距單位 list
 $darken : false;
 $spacingUnit-null : 0; // 空值
 $w : null; // 版面寬度
-$layout-width : 'fixed'; // 版面配置 固定/彈性 字串
-
+$layout-width : 'full'; // 版面配置 固定/彈性 字串
+$fixed-width : 1366px; // 固定寬度  
 //第一題
 $a : 100px;
 $a : 200px !default; //改變權重 預設值
@@ -98,7 +98,7 @@ header {
 
     section.fixed {
         @if $layout-width =='fixed' {
-            max-width: 1200px;
+            max-width: $fixed-width;
             margin: 0 auto;
         }
 
@@ -131,8 +131,12 @@ header {
                     a {
                         text-decoration: none;
                         color: $fontBaseColor;
+                        padding-bottom: 16px;
+                        transition: all 0.3s ease;
                         &:hover {
                             color: $colorPrimary;
+                            padding-bottom: 16px;
+                            border-bottom: 3px solid $colorPrimary;
                         }// 偽元素
                         &::before {
                             content: '> ';
@@ -160,7 +164,7 @@ footer {
 
     .footer-fixed {
         @if $layout-width =='fixed' {
-            max-width: 1200px;
+            max-width: $fixed-width;
             margin: 0 auto;
         }
 

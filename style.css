@@ -47,8 +47,7 @@ header {
   background-color: #e1e1e1;
 }
 header section.fixed {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,9 +71,13 @@ header section.fixed nav ul li {
 header section.fixed nav ul li a {
   text-decoration: none;
   color: #333333;
+  padding-bottom: 16px;
+  transition: all 0.3s ease;
 }
 header section.fixed nav ul li a:hover {
   color: #0062ff;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #0062ff;
 }
 header section.fixed nav ul li a::before {
   content: "> ";
@@ -92,8 +95,7 @@ footer {
   background-color: #f3f9bf;
 }
 footer .footer-fixed {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
