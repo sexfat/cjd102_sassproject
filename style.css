@@ -1,5 +1,24 @@
 @charset "UTF-8";
 /* scss 編譯過的 註解 */
+.w {
+  width: 100px;
+}
+
+.z {
+  width: 300px;
+}
+
+.b {
+  width: 300px;
+}
+
+.content-box {
+  box-sizing: content-box;
+  border: 1px solid #0062ff;
+  background-image: url("content-box.jpg");
+  border: 5px;
+}
+
 body {
   font-size: 16px;
   line-height: 1.5;

@@ -14,6 +14,42 @@ $darken : false;
 $spacingUnit-null : null; // 空值
 $w : null; // 版面寬度
 
+//第一題
+$a : 100px;
+$a : 200px !default; //改變權重 預設值
+
+
+.w {
+    width: $a;
+}
+
+
+//第二題 作用域
+
+// $z : 400px;
+.z {
+    $z : 300px !global; //提升作用域 全域變數 新版sass 不建議使用
+    width: $z;
+}
+
+.b {
+    width: $z;
+}
+
+//變數轉型情境
+$name : content-box;
+$attr : border;
+
+.#{$name} {
+    box-sizing: content-box;
+    border: 1px solid $colorPrimary;
+    background-image: url('#{$name}.jpg');
+    #{$attr} : 5px; 
+}
+
+
+
+
 
 
 body {
@@ -37,7 +73,9 @@ body {
         max-width: $w;
         margin: 0 auto;
         padding: $spacingUnit;
-    }@else {
+    }
+
+    @else {
         width: 100%;
     }
 }
