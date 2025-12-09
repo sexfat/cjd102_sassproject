@@ -1,0 +1,43 @@
+body {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    box-sizing: border-box;
+    color: $fontBaseColor;
+
+    @if $darken {
+        background-color: #333333
+    }
+
+    @else {
+        background-color: $bgColor;
+    }
+
+    margin: $spacingUnit-null;
+}
+
+.container {
+    width: 100%;
+}
+
+.wrapper {
+    @if $w {
+        max-width: $w;
+        margin: 0 auto;
+        padding: $spacingUnit;
+    }
+
+    @else {
+        width: 100%;
+    }
+}
+
+.content {
+    width: 100%;
+    min-height: 600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: $fontBaseColor;
+    margin-bottom: $spacingUnit;
+}

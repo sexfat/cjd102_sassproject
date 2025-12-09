@@ -1,45 +1,57 @@
 @charset "UTF-8";
 /* scss 編譯過的 註解 */
-.w {
-  width: 100px;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.z {
-  width: 300px;
-}
-
-.b {
-  width: 300px;
-}
-
-.content-box {
-  box-sizing: content-box;
-  border: 1px solid #0062ff;
-  background-image: url("content-box.jpg");
-  border: 5px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  color: #333333;
-  background-color: #f8ca66;
-  margin: 0;
+  line-height: 1;
 }
 
-.wrapper {
-  width: 100%;
+ol, ul {
+  list-style: none;
 }
 
-h1 {
-  font-size: 2.5em;
-  color: #333333;
-  margin-bottom: 8px 10px;
+blockquote, q {
+  quotes: none;
 }
 
-.container {
-  width: 100%;
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 header {
@@ -83,9 +95,32 @@ header section.fixed nav ul li a::before {
   content: "> ";
 }
 
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  color: #333333;
+  background-color: #f8ca66;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+}
+
 .content {
   width: 100%;
   min-height: 600px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333333;
+  margin-bottom: 8px 10px;
 }
 
 footer {
@@ -121,6 +156,25 @@ footer p.copy {
   font-size: 14px;
   color: #333333;
   text-align: center;
+}
+
+.w {
+  width: 100px;
+}
+
+.z {
+  width: 300px;
+}
+
+.b {
+  width: 300px;
+}
+
+.content-box {
+  box-sizing: content-box;
+  border: 1px solid #0062ff;
+  background-image: url("content-box.jpg");
+  border: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

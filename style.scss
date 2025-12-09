@@ -1,23 +1,31 @@
 /* scss 編譯過的 註解 */
-$fontSize : 16px; // 數值
-$lineHeight : 1.5; // 數值
-$colorPrimary : #0062ff; // 主要顏色
-$fontBaseColor : #333333; // 文字顏色
-$bgColor : #f8ca66; // 背景顏色
-$fontFamilyBase : 'Helvetica Neue',
-Helvetica,
-Arial,
-sans-serif; // 主要字型 字串
 
-$spacingUnit : 8px 10px; // 間距單位 list
-$darken : false;
-$spacingUnit-null : 0; // 空值
-$w : null; // 版面寬度
-$layout-width : 'full'; // 版面配置 固定/彈性 字串
-$fixed-width : 1366px; // 固定寬度  
-//第一題
-$a : 100px;
-$a : 200px !default; //改變權重 預設值
+//變數引入
+@import 'sass/base/var';
+@import 'sass/base/font';
+@import 'sass/base/color';
+@import 'sass/plugin/reset';
+
+//函式庫
+@import 'sass/mixin/mixins';
+
+// 組件
+@import 'sass/component/btn';
+@import 'sass/component/card';
+
+// 版面配置
+@import 'sass/layout/header';
+@import 'sass/layout/body';
+@import 'sass/layout/footer';
+@import 'sass/layout/login';
+
+
+// 頁面
+@import 'sass/page/index';
+@import 'sass/page/about';
+@import 'sass/page/product';
+
+
 
 
 .w {
@@ -53,155 +61,14 @@ $attr : border;
 
 
 
-body {
-    font-size: $fontSize;
-    line-height: $lineHeight;
-    box-sizing: border-box;
-    color: $fontBaseColor;
-
-    @if $darken {
-        background-color: #333333
-    }
-
-    @else {
-        background-color: $bgColor;
-    }
-
-    margin: $spacingUnit-null;
-}
-
-.wrapper {
-    @if $w {
-        max-width: $w;
-        margin: 0 auto;
-        padding: $spacingUnit;
-    }
-
-    @else {
-        width: 100%;
-    }
-}
-
-h1 {
-    font-size: 2.5em;
-    color: $fontBaseColor;
-    margin-bottom: $spacingUnit;
-}
-
-.container {
-    width: 100%;
-}
-
-header {
-    width: 100%;
-    background-color: #e1e1e1;
-
-    section.fixed {
-        @if $layout-width =='fixed' {
-            max-width: $fixed-width;
-            margin: 0 auto;
-        }
-
-        @else {
-            width: 100%;
-        }
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
 
-        .logo {
-            width: 50px;
-            height: 50px;
-            background-color: #3eff62;
-        }
-
-        nav {
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-
-                li {
-                    width: 120px;
-                    text-align: center;
-                    margin: 0px 10px;
-                    a {
-                        text-decoration: none;
-                        color: $fontBaseColor;
-                        padding-bottom: 16px;
-                        transition: all 0.3s ease;
-                        &:hover {
-                            color: $colorPrimary;
-                            padding-bottom: 16px;
-                            border-bottom: 3px solid $colorPrimary;
-                        }// 偽元素
-                        &::before {
-                            content: '> ';
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.content {
-    width: 100%;
-    min-height: 600px;
 
 
-}
 
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f3f9bf;
 
-    .footer-fixed {
-        @if $layout-width =='fixed' {
-            max-width: $fixed-width;
-            margin: 0 auto;
-        }
 
-        @else {
-            width: 100%;
-        }
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        .logo-footer {
-            width: 50px;
-            height: 50px;
-            background-color: #3eff62;
-        }
 
-        nav.menu-footer {
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-
-                li {
-                    width: 120px;
-                    text-align: center;
-                    margin: 0px 10px;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
-    p.copy {
-        font-size: 14px;
-        color: $fontBaseColor;
-        text-align: center;
-    }
-}
