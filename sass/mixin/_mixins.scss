@@ -1,36 +1,36 @@
-@mixin title($size:24px , $color:#333 ,$dash:false) {
-   font-size: $size;
-   font-weight: bold;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   color : $color;
-   @if $dash {
-   &::after {
-     content: '';
-     display: block;
-     width: 50px;
-     height: 4px;
-     background-color: $color;
-     margin: 5px auto 0 auto;
-   }
-}
+@mixin title($size: 24px, $color: #333, $dash: false) {
+    font-size: $size;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $color;
+
+    @if $dash {
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: $color;
+            margin: 5px auto 0 auto;
+        }
+    }
 
 }
 
 h1 {
-  @include title(60px, #b3ff00);
-  text-align: center
+    @include title(60px, #b3ff00);
+    text-align: center
 }
 
 
 h2 {
-   @include title(48px, #ff5555);
-   text-align: center;
+    @include title(48px, #ff5555);
+    text-align: center;
 }
 
 
 h3 {
-  @include title();
-  text-align: center;
+    @include title();
+    text-align: center;
 
 }
-
