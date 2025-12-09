@@ -13,7 +13,7 @@ $spacingUnit : 8px 10px; // 間距單位 list
 $darken : false;
 $spacingUnit-null : 0; // 空值
 $w : null; // 版面寬度
-$layout-width : 100; // 版面配置 固定/彈性 字串
+$layout-width : 'fixed'; // 版面配置 固定/彈性 字串
 
 //第一題
 $a : 100px;
@@ -94,6 +94,7 @@ h1 {
 
 header {
     width: 100%;
+    background-color: #e1e1e1;
 
     section.fixed {
         @if $layout-width =='fixed' {
@@ -108,7 +109,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #e1e1e1;
+
 
         .logo {
             width: 50px;
@@ -130,5 +131,56 @@ header {
                 }
             }
         }
+    }
+}
+
+.content {
+   width: 100%;
+   min-height: 600px;
+
+
+}
+      
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f3f9bf;
+    .footer-fixed {
+        @if $layout-width =='fixed' {
+            max-width: 1200px;
+            margin: 0 auto;
+        }@else {
+            width: 100%;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo-footer {
+            width: 50px;
+            height: 50px;
+            background-color: #3eff62;
+        }
+        nav.menu-footer {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+
+                li {
+                    width: 120px;
+                    text-align: center;
+                    margin: 0px 10px;
+                    font-size: 12px;
+                }
+            }
+        }   
+    }
+    p.copy {    
+        font-size: 14px;
+        color: $fontBaseColor;
+        text-align: center;
     }
 }
