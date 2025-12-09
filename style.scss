@@ -60,10 +60,10 @@ $attr : border;
 // 運算
 
 .aaa {
-   width: 100 + 50px;
-   height: 200 - 1 + px ;
-   font-size: 16 * 2  + px;
-   font : 30 / 2 + px //除法要注意 單位
+    width: 100 + 50px;
+    height: 200 - 1 + px;
+    font-size: 16 * 2 + px;
+    font: 30 / 2 + px //除法要注意 單位
 }
 
 
@@ -71,26 +71,33 @@ $attr : border;
 .bbb {
     // width:  round(134.422) + px; //四捨五入
     // width:  ceil(134.622px); //無條件進位
-    width:  floor(134.922) + px; //無條件捨去
+    width: floor(134.922) + px; //無條件捨去
 }
 
 .ccc {
-    color : lighten(#000000, 100%); //變亮
-    background-color:  darken( #fff, 100%); //變暗
+    color: lighten(#000000, 100%); //變亮
+    background-color: darken(#fff, 100%); //變暗
 }
 
+$w : 100;
 
+.layout {
+    @if $w == 100 {
+        width: 100%;
 
+    }@else {
+        width: $w + px;
+    }
+}
 
+$title : small;
 
-
-
-
-
-
-
-
-
-
-
-
+.title {
+   @if $title == large {
+       font-size: 32px;
+   } @else if $title == medium {
+       font-size: 24px;
+   } @else {
+       font-size: 16px;
+   } 
+}
