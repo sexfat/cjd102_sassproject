@@ -4,21 +4,49 @@ $lineHeight : 1.5; // 數值
 $colorPrimary : #0062ff; // 主要顏色
 $fontBaseColor : #333333; // 文字顏色
 $bgColor : #f8ca66; // 背景顏色
-$fontFamilyBase : 'Helvetica Neue', Helvetica, Arial, sans-serif; // 主要字型 字串
+$fontFamilyBase : 'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif; // 主要字型 字串
 
 $spacingUnit : 8px 10px; // 間距單位 list
+$darken : false;
+$spacingUnit-null : null; // 空值
+$w : 1280px; // 版面寬度
 
 
 
 body {
-   font-size: $fontSize;
-   line-height: $lineHeight;
-   color :$fontBaseColor;
-   background-color: $bgColor;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $fontBaseColor;
+
+    @if $darken {
+        background-color: #333333
+    }
+
+    @else {
+        background-color: $bgColor;
+    }
+
+    margin: $spacingUnit-null;
 }
 
+.wrapper {
+    @if $w {
+        max-width: $w;
+        margin: 0 auto;
+        padding: $spacingUnit;
+    }@else {
+        width: 100%;
+    }
+}
+
+
+
+
 h1 {
-   font-size: 2.5em;
-   color: $fontBaseColor;
-   margin-bottom: $spacingUnit;
+    font-size: 2.5em;
+    color: $fontBaseColor;
+    margin-bottom: $spacingUnit;
 }
