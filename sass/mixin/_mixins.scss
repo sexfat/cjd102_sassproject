@@ -162,25 +162,27 @@ h3 {
 
 
 // 線條樣式
-    @mixin line() {
-        &::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: currentColor;
-            margin: 5px auto 0 auto;
-        }
+@mixin line() {
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: currentColor;
+        margin: 5px auto 0 auto;
+    }
 
-        &::before {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: currentColor;
-            margin: 5px auto 0 auto;
-        }
-    };
+    &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: currentColor;
+        margin: 5px auto 0 auto;
+    }
+}
+
+;
 
 // 標題樣式
 @mixin title($fontsizeBase) {
@@ -206,12 +208,41 @@ h3 {
     h4 {
         font-size: $fontsizeBase * 2;
         margin-bottom: 20px;
-         @include line();
+        @include line();
     }
 
     h5 {
         font-size: $fontsizeBase * 1;
         margin-bottom: 20px;
-         @include line();
+        @include line();
+    }
+}
+
+
+@mixin borderRadius($radius: 6px) {
+    border-radius: $radius;
+    border: 2px;
+}
+
+
+
+
+
+.box {
+    @include borderRadius();
+}
+
+// 陰影
+@mixin shadow($level: 1) {
+    @if $level ==1 {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @else if $level ==2 {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @else if $level ==3 {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 }
