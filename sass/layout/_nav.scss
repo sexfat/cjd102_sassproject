@@ -4,6 +4,9 @@
                 padding: 0;
                 margin: 0;
                 display: flex;
+                @include m {
+                    display:none;
+                }
 
                 li {
                     width: 120px;
@@ -26,3 +29,6 @@
                 }
             }
         }
+
+
+        
