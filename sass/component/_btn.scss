@@ -15,20 +15,20 @@
 }
 
 // 大型按鈕
-.btn-large {
+.btn-large-s {
   @include btn(12px, $colorSecondary , 8px);
   margin: 10px auto;
 }
 
 // 小型按鈕
-.btn-small {
+.btn-small-s {
   @include btn(6px, #7a0600, 4px);
   margin: 10px auto;
   color: #fff
 }
 
 // 圓形按鈕
-.btn-circle {
+.btn-circle-s {
   @include btn(10px, $colorPrimary , 25px, '\2713');
   margin: 10px auto;
 }
@@ -36,7 +36,7 @@
 
 //尺寸不給控制
 @mixin btnAll($size: default, $bgc: $colorPrimary , $style: default) {
-  .btn-#{$size} {
+  .btn-#{$size}_#{$style} {
   //尺寸
     @if $size ==large {
       padding: 12px 24px;
@@ -74,3 +74,9 @@
   }
 
 }
+
+@include btnAll(small, #b800d9, default);
+@include btnAll(small, #b800d9, circle);
+@include btnAll(default, #b800d9, circle);
+@include btnAll(default, #b800d9, default);
+@include btnAll(large, #b5da00, circle);
