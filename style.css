@@ -164,6 +164,12 @@ h3 {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 6px;
+  border: 2px solid rgb(140.7557603687, 0, 166);
+  background-color: transparent;
+  color: rgb(140.7557603687, 0, 166);
+}
+.btn-small_default:hover {
+  color: #fff;
 }
 .btn-small_default:hover {
   background-color: rgb(140.7557603687, 0, 166);
@@ -178,6 +184,12 @@ h3 {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 25px;
+  border: 2px solid rgb(140.7557603687, 0, 166);
+  background-color: transparent;
+  color: rgb(140.7557603687, 0, 166);
+}
+.btn-small_circle:hover {
+  color: #fff;
 }
 .btn-small_circle:hover {
   background-color: rgb(140.7557603687, 0, 166);
@@ -220,8 +232,28 @@ h3 {
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 25px;
+  border: 2px solid rgb(138.6559633028, 167, 0);
+  background-color: transparent;
+  color: rgb(138.6559633028, 167, 0);
 }
 .btn-large_circle:hover {
+  color: #fff;
+}
+.btn-large_circle:hover {
+  background-color: rgb(138.6559633028, 167, 0);
+}
+
+.btn-large_default {
+  padding: 12px 24px;
+  max-width: 180px;
+  background-color: #b5da00;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+.btn-large_default:hover {
   background-color: rgb(138.6559633028, 167, 0);
 }
 

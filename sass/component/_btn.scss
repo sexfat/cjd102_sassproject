@@ -36,8 +36,9 @@
 
 
 // 混合使用
-@include btnAll(small, #b800d9, default);
-@include btnAll(small, #b800d9, circle);
+@include btnAll(small, #b800d9, default , true);
+@include btnAll(small, #b800d9, circle ,true);
 @include btnAll(default, #b800d9, circle);
 @include btnAll(default, #b800d9, default);
-@include btnAll(large, #b5da00, circle);
+@include btnAll(large, #b5da00, circle ,true);
+@include btnAll(large, #b5da00, default);
