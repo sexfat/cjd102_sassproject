@@ -34,47 +34,8 @@
 }
 
 
-//尺寸不給控制
-@mixin btnAll($size: default, $bgc: $colorPrimary , $style: default) {
-  .btn-#{$size}_#{$style} {
-  //尺寸
-    @if $size ==large {
-      padding: 12px 24px;
-      max-width: 180px;
-    }
 
-    @else if $size ==small {
-      padding: 6px 12px;
-      max-width: 90px;
-    }
-
-    @else if $size ==default {
-      padding: 8px 20px;
-      max-width: 120px;
-    }
-   //顏色
-    background-color: $bgc;
-    color: #333;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-   //樣式
-    @if $style ==circle {
-      border-radius: 25px;
-    }
-
-    @else {
-      border-radius: 6px;
-    }
-
-    &:hover {
-      background-color: darken($bgc , 10%); // 變暗
-    }
-
-  }
-
-}
-
+// 混合使用
 @include btnAll(small, #b800d9, default);
 @include btnAll(small, #b800d9, circle);
 @include btnAll(default, #b800d9, circle);
