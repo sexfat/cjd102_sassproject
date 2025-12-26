@@ -38,10 +38,11 @@ h3 {
 
 // Button styles 
 // 大小 / 顏色 / 圓角 / hover 效果
+// 範例: @include btn(大小 , 顏色 , 圓角);
 
-@mixin btn($size , $bgc ,$bdr) {
+@mixin btn($size , $bgc , $bdr , $icon: null) {
     //大小
-    padding: $size  $size * 1.5;
+    padding: $size $size * 1.5;
     max-width: $size * 15;
     // 顏色
     background-color: $bgc;
@@ -51,8 +52,22 @@ h3 {
     transition: all 0.3s ease;
     //圓角
     border-radius: $bdr;
+
     //hover
     &:hover {
         background-color: darken($bgc , 10%); // 變暗
+    }
+
+    @if $icon {
+        &::before {
+            content: '#{$icon}';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+            position: relative;
+            top: -8px;
+            left: -5px;
+        }
     }
 }
