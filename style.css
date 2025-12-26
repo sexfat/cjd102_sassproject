@@ -93,6 +93,23 @@ h3 {
   background-color: rgb(0, 78.4, 204);
 }
 
+.btn-large {
+  padding: 12px 18px;
+  max-width: 180px;
+  background-color: #00ffc8;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+.btn-large:hover {
+  background-color: #00cca0;
+}
+.btn-large {
+  margin: 10px auto;
+}
+
 header {
   width: 100%;
   background-color: #e1e1e1;

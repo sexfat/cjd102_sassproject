@@ -13,4 +13,11 @@
    }         
 }
 
+.btn-large {
+   @include btn(12px , $colorSecondary , 8px);
+   margin: 10px auto ;
+}
+
+
+
 
