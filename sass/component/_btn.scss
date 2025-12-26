@@ -1,37 +1,76 @@
 .btn {
-   padding: 8px 20px;
-   max-width: 120px;
-   text-align: center;
-   border-radius: 6px;
-   background-color: $colorPrimary;
-   color: #fff;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   margin: 20px auto 0;
-   &:hover {
-     background-color: darken($colorPrimary , 10%); // 變暗
-   }         
+  padding: 8px 20px;
+  max-width: 120px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: $colorPrimary;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px auto 0;
+
+  &:hover {
+    background-color: darken($colorPrimary , 10%); // 變暗
+  }
 }
 
 // 大型按鈕
 .btn-large {
-   @include btn(12px , $colorSecondary , 8px);
-   margin: 10px auto ;
+  @include btn(12px, $colorSecondary , 8px);
+  margin: 10px auto;
 }
 
 // 小型按鈕
 .btn-small {
-   @include btn(6px , #7a0600 , 4px );
-   margin: 10px auto ;
-   color: #fff
+  @include btn(6px, #7a0600, 4px);
+  margin: 10px auto;
+  color: #fff
 }
 
 // 圓形按鈕
 .btn-circle {
-   @include btn(10px , $colorPrimary , 25px  , '\2713' );
-   margin: 10px auto;
+  @include btn(10px, $colorPrimary , 25px, '\2713');
+  margin: 10px auto;
 }
 
 
+//尺寸不給控制
+@mixin btnAll($size: default, $bgc: $colorPrimary , $style: default) {
+  .btn-#{$size} {
+  //尺寸
+    @if $size ==large {
+      padding: 12px 24px;
+      max-width: 180px;
+    }
 
+    @else if $size ==small {
+      padding: 6px 12px;
+      max-width: 90px;
+    }
 
+    @else if $size ==default {
+      padding: 8px 20px;
+      max-width: 120px;
+    }
+   //顏色
+    background-color: $bgc;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+   //樣式
+    @if $style ==circle {
+      border-radius: 25px;
+    }
+
+    @else {
+      border-radius: 6px;
+    }
+
+    &:hover {
+      background-color: darken($bgc , 10%); // 變暗
+    }
+
+  }
+
+}

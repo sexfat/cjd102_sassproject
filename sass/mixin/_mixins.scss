@@ -38,7 +38,7 @@ h3 {
 
 // Button styles 
 // 大小 / 顏色 / 圓角 / hover 效果
-// 範例: @include btn(大小 , 顏色 , 圓角);
+// 範例: @include btn(大小 , 顏色 , 圓角 , icon);
 
 @mixin btn($size , $bgc , $bdr , $icon: null) {
     //大小
@@ -57,7 +57,7 @@ h3 {
     &:hover {
         background-color: darken($bgc , 10%); // 變暗
     }
-
+   // icon
     @if $icon {
         &::before {
             content: '#{$icon}';
