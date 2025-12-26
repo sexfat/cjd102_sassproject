@@ -45,7 +45,7 @@
 
 @include btnAll(large, #b5da00, circle, true) {
   margin: 10px auto;
-}
+}//額外加入屬性
 
 ;
 @include btnAll(large, #b5da00, default);
