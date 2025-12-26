@@ -242,6 +242,9 @@ h3 {
 .btn-large_circle:hover {
   background-color: rgb(138.6559633028, 167, 0);
 }
+.btn-large_circle {
+  margin: 10px auto;
+}
 
 .btn-large_default {
   padding: 12px 24px;

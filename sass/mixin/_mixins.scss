@@ -78,6 +78,7 @@ h3 {
 //尺寸不給控制
 @mixin btnAll($size: default, $bgc: $colorPrimary , $style: default, $outline: false) {
     .btn-#{$size}_#{$style} {
+      
 
         //尺寸
         @if $size ==large {
@@ -135,7 +136,7 @@ h3 {
             background-color: darken($bgc , 10%); // 變暗
         }
 
-
+      @content; // 允許使用者在混合後中加入額外樣式
     }
 
 }
