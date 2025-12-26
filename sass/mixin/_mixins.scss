@@ -148,15 +148,14 @@ h3 {
 //RWD
 // tablet
 @mixin t {
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:$tablet-breakpoint) {
         @content;
     }
 }
 
-
 // mobile
 @mixin m {
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:$mobile-breakpoint) {
         @content;
     }
 }

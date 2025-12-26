@@ -15,13 +15,13 @@
 }
 
 // 大型按鈕
-.btn-large-s {
+.btn-large {
   @include btn(12px, $colorSecondary , 8px);
   margin: 10px auto;
 }
 
 // 小型按鈕
-.btn-small-s {
+.btn-small {
   @include btn(6px, #7a0600, 4px);
   margin: 10px auto;
   color: #fff

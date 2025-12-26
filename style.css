@@ -93,7 +93,7 @@ h3 {
   background-color: rgb(0, 78.4, 204);
 }
 
-.btn-large-s {
+.btn-large {
   padding: 12px 18px;
   max-width: 180px;
   background-color: #00ffc8;
@@ -103,14 +103,14 @@ h3 {
   transition: all 0.3s ease;
   border-radius: 8px;
 }
-.btn-large-s:hover {
+.btn-large:hover {
   background-color: #00cca0;
 }
-.btn-large-s {
+.btn-large {
   margin: 10px auto;
 }
 
-.btn-small-s {
+.btn-small {
   padding: 6px 9px;
   max-width: 90px;
   background-color: #7a0600;
@@ -120,10 +120,10 @@ h3 {
   transition: all 0.3s ease;
   border-radius: 4px;
 }
-.btn-small-s:hover {
+.btn-small:hover {
   background-color: rgb(71, 3.4918032787, 0);
 }
-.btn-small-s {
+.btn-small {
   margin: 10px auto;
   color: #fff;
 }
@@ -154,7 +154,7 @@ h3 {
 .btn-circle {
   margin: 10px auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   .btn-circle {
     max-width: 90%;
   }
@@ -280,7 +280,7 @@ header section.fixed .logo {
   height: 50px;
   background-color: #3eff62;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   header section.fixed .logo {
     width: 40px;
     height: 40px;
@@ -293,7 +293,7 @@ header section.fixed nav ul {
   margin: 0;
   display: flex;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   header section.fixed nav ul {
     display: none;
   }

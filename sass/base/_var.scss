@@ -7,3 +7,7 @@ $fixed-width : 1366px; // 固定寬度
 //第一題
 $a : 100px;
 $a : 200px !default; //改變權重 預設值
+
+// 斷點變數
+$tablet-breakpoint: 996px;
+$mobile-breakpoint: 720px;
